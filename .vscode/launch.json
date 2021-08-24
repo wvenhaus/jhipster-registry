@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-JHipsterRegistryApp<jhipster-registry>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "tech.jhipster.registry.JHipsterRegistryApp",
+            "projectName": "jhipster-registry",
+            "args": ""
+        }
+    ]
+}

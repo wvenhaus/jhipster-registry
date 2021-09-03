@@ -30,5 +30,5 @@ CMD echo "The JHipster Registry will start in ${JHIPSTER_SLEEP}s..." && \
         ${JAVA_OPTS} -Djava.security.egd=file:/dev/./urandom \
         -jar /jhipster-registry.jar
 
-ADD /central-server-config /central-server-config
+ADD /central-config /central-config
 COPY --from=builder /jhipster-registry.jar .

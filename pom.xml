@@ -538,6 +538,9 @@
                                 <port>8761</port>
                             </ports>
                             <environment>
+                                <SPRING_PROFILES_ACTIVE>prod</SPRING_PROFILES_ACTIVE>
+                                <SPRING_SECURITY_USER_PASSWORD>admin</SPRING_SECURITY_USER_PASSWORD>
+                                <JHIPSTER_REGISTRY_PASSWORD>admin</JHIPSTER_REGISTRY_PASSWORD>
                                 <SPRING_OUTPUT_ANSI_ENABLED>ALWAYS</SPRING_OUTPUT_ANSI_ENABLED>
                                 <JHIPSTER_SLEEP>0</JHIPSTER_SLEEP>
                             </environment>
@@ -545,10 +548,20 @@
                             <user>1000</user>
                         </container>
                         <extraDirectories>
-                            <paths>src/main/docker/jib</paths>
+                            <paths>
+                                <path>src/main/docker/jib</path>
+                                <path>
+                                    <from>src/main/docker/central-server-config/docker-config</from>
+                                    <into>/central-config</into>
+                                </path>
+                            </paths>
                             <permissions>
                                 <permission>
                                     <file>/entrypoint.sh</file>
+                                    <mode>777</mode>
+                                </permission>
+                                <permission>
+                                    <file>/tmp</file>
                                     <mode>755</mode>
                                 </permission>
                             </permissions>

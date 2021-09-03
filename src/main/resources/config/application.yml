@@ -22,7 +22,7 @@ management:
         include: ['configprops', 'env', 'health', 'info', 'jhimetrics', 'logfile', 'loggers', 'prometheus', 'threaddump']
   endpoint:
     health:
-      show-details: when_authorized
+      show-details: when-authorized
       roles: 'ROLE_ADMIN'
       probes:
         enabled: true
@@ -105,9 +105,9 @@ spring:
   thymeleaf:
     mode: HTML
 
-logging:
-  file:
-    name: target/jhipster-registry.log
+#logging:
+#  file:
+#    name: var/jhipster-registry.log
 
 server:
   port: 8761
